@@ -1,4 +1,5 @@
 
+import javax.swing.ImageIcon;
 import javax.swing.SwingUtilities;
 
 /*
@@ -16,6 +17,7 @@ public class NewJFrame extends javax.swing.JFrame {
     
     public NewJFrame() {
         initComponents();
+        setIconImage(putIconToFrame().getImage());
     }
 
     private int countCof = 0;
@@ -584,6 +586,10 @@ public class NewJFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private ImageIcon putIconToFrame(){
+        ImageIcon logo = new ImageIcon("E:\\codejava\\CoffeShop\\coffee.png");
+        return logo;
+    }
     private void radCapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radCapActionPerformed
        if(radCap.isSelected()){
             radCoffe.setSelected(false);
